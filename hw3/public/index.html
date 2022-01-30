@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/></script>
+</head>
+
+<body>
+<script src="javascripts/form.js"></script>
+<!-- Top of the webpage, contains the name and the image -->
+<div class="top">
+  <h1>Cheesecake Order Form</h1>
+  <img src="images/cheesecake.jpg" title="Gaze upon its beauty" width="200" height="200">
+</div><br>
+<!-- Beginning of the form section -->
+<form name="form" onsubmit="return validateForm()" method="post">
+  <!-- Div containing the quantity option panel -->
+  <div class="quantity" style="float:left;">
+    <label for="quantity">Quantity</label><br>
+    <select name="quantity" id="quantity">
+      <option value="quantity1">1</option>
+      <option value="quantity2">2</option>
+      <option value="quantity3">3</option>
+    </select><br>
+  </div>
+  <!-- Div containing the topping radio buttons -->
+  <div class="topping" style="float:left;">
+    <label for="topping">Topping</label><br>
+    <input type="radio" id="plain" name="topping" value="Plain">
+      <label for="plain">Plain</label><br>
+    <input type="radio" id="cherry" name="topping" value="Cherry">
+      <label for="cherry">Cherry</label><br>
+    <input type="radio" id="chocolate" name="topping" value="Chocolate">
+      <label for="chocolate">Chocolate</label><br>
+  </div>
+  <!-- Clears the float left -->
+  <div style="clear:both;">&nbsp;</div>
+  <!-- Div for the notes box -->
+  <div class="notes">
+    <label for="notes">Notes</label><br>
+	<textarea name="notes">Enter any special instructions here.</textarea><br>
+  </div><br>
+  <!-- And lastly, the submit -->
+  <div class="order">
+    <input id="submit" type="submit" value="Order">
+  </div><br>
+</form>
+
+<p class="success" id="success" visibility=hidden>Thank you! Your order has been placed.</p>
+
+<!-- Extra information below the form -->
+<div class="dropdown">
+  <button class="dropbtn">Total Orders per Month</button>
+    <div class=dropdown-content>
+	  <a href="#">January</a>
+	  <a href="#">February</a>
+	  <a href="#">March</a>
+	  <a href="#">April</a>
+	  <a href="#">May</a>
+	  <a href="#">June</a>
+	  <a href="#">July</a>
+	  <a href="#">August</a>
+	  <a href="#">September</a>
+	  <a href="#">October</a>
+	  <a href="#">November</a>
+	  <a href="#">December</a>
+	</div>
+    <ul>
+      <li>11 cherry</li>
+      <li>17 chocolate</li>
+      <li>31 plain</li>
+    </ul>
+</div>
+</body>
+</html>
