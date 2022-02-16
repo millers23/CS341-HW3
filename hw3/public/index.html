@@ -50,27 +50,28 @@
 <p class="success" id="success" visibility=hidden>Thank you! Your order has been placed.</p>
 
 <!-- Extra information below the form -->
-<div class="dropdown">
-  <button class="dropbtn">Total Orders per Month</button>
-    <div class=dropdown-content>
-	  <a href="#">January</a>
-	  <a href="#">February</a>
-	  <a href="#">March</a>
-	  <a href="#">April</a>
-	  <a href="#">May</a>
-	  <a href="#">June</a>
-	  <a href="#">July</a>
-	  <a href="#">August</a>
-	  <a href="#">September</a>
-	  <a href="#">October</a>
-	  <a href="#">November</a>
-	  <a href="#">December</a>
-	</div>
-    <ul>
-      <li>11 cherry</li>
-      <li>17 chocolate</li>
-      <li>31 plain</li>
-    </ul>
+<div  class="dropdown">
+  <script src="javascripts/month.js"></script>
+  <button class="dropbtn">Orders per Month</button>
+  <div onselect="return getMonth()" id="dropdown-content" class="dropdown-content">
+    <a id="0" href="#">January</a>
+	  <a id="1" href="#">February</a>
+	  <a id="2" href="#">March</a>
+	  <a id="3" href="#">April</a>
+	  <a id="4" href="#">May</a>
+	  <a id="5" href="#">June</a>
+	  <a id="6" href="#">July</a>
+	  <a id="7" href="#">August</a>
+	  <a id="8" href="#">September</a>
+	  <a id="9" href="#">October</a>
+	  <a id="10" href="#">November</a>
+	  <a id="11" href="#">December</a>
+  </div>
+  <ul>
+    <li>11 cherry</li>
+    <li>17 chocolate</li>
+    <li>31 plain</li>
+  </ul>
 </div>
 </body>
 </html>
