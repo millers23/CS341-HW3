@@ -1,5 +1,5 @@
 function getMonth() {
-    var d = document.getElementById("dropdown-content").getAttribute("href");
-    var month = d.id;
-    print(month);
+    $.post("demo_test.asp", function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+    });
 }
