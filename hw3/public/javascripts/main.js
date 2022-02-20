@@ -62,6 +62,34 @@ function getPlain(){
     return "Plain: "+plain;
 }
 
+//https://metabox.io/send-get-post-request-with-javascript-fetch-api/
+const params = {
+    param1: cherryParam,
+    param2: chocolateParam,
+    param3: plain
+};
+const options = {
+    method: 'POST',
+    body: JSON.stringify( params )  
+};
+const response = post( url, params );
+fetch( 'https://domain.com/path/', options )
+    .then( response => response.json() )
+    .then( response => {
+        const temp = JSON.parse(params)
+        cherry = temp[0]
+        chocolate = temp[1]
+        plain = temp[2]
+} );
+const request = ( url, params = {}, method = 'GET' ) => {
+    let options = {
+        method
+    };
+    
+    options.body = JSON.stringify( params );
+    return fetch( url, options ).then( response => response.json() );
+};
+
 //https://stackoverflow.com/questions/37189306/javascript-bootstrap-dropdown-on-hover-open-all-menu-levels-of-submenu
 $(document).ready(function() {
     $(".dropdown, .dropdown-active").hover(function() {
