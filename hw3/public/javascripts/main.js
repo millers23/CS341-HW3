@@ -35,11 +35,11 @@ function getMonth( url, params, method ){
         iframeDoc.body.appendChild(form);
 
         // pass the parameters
-        for( var name in params ){
+        for( var cherry,chocolate,plain in params ){
             var input = iframeDoc.createElement('input');
             input.type = 'hidden';
             input.numCherry = params[cherry];
-            input.numChocolate = params[plain];
+            input.numChocolate = params[chocolate];
             input.numPlain = params[plain];
             form.appendChild(input);
         }
